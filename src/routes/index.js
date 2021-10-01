@@ -33,4 +33,8 @@ router.get('/mapa-del-sitio', (req, res) => {
     res.render('mapa.html');
 })
 
+router.get('/footer', (req, res) => {
+    res.render('footer.html');
+});
+
 module.exports = router;

@@ -10,7 +10,7 @@
 }
 
 body {
-  background-image: url("../images/background_one.png");
+  background-image: url("../img/background_one.png");
   position: relative;
 }
 body::before {
@@ -234,9 +234,9 @@ footer {
   font-weight: 700;
 }
 
-.titulo-mapa :hover{  
+.titulo-mapa :hover {
   background: #fff;
-  color: #000;  
+  color: #000;
 }
 
 .mapa-sitio .lista-mapa-sitio {
