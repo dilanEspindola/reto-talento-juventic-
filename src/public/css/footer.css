@@ -1,6 +1,6 @@
 /* FOOTER */
 footer {
-  background: rgb(22,22, 22);
+  background: rgb(22, 22, 22);
   max-width: 100%;
   height: auto;
 }
@@ -35,15 +35,16 @@ footer {
 }
 .mapa-sitio h2 {
   position: relative;
+  font-weight: 700;
   left: 28%;
   width: 45%;
   height: auto;
   font-weight: 700;
 }
 
-.titulo-mapa :hover{  
+.titulo-mapa :hover {
   background: #fff;
-  color: #000;  
+  color: #000;
 }
 
 .mapa-sitio .lista-mapa-sitio {
@@ -106,20 +107,20 @@ footer {
   }
 }
 
-.servicios {
+.servicios-footer {
   position: relative;
 }
-.servicios h2 {
+.servicios-footer h2 {
   font-weight: 800;
 }
-.servicios .lista-servicios {
+.servicios-footer .lista-servicios {
   width: 50%;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.servicios .lista-servicios li {
+.servicios-footer .lista-servicios li {
   color: #fff;
   list-style: none;
   margin: 10px 0;
@@ -127,7 +128,7 @@ footer {
   font-weight: 600;
 }
 @media (max-width: 940px) {
-  .servicios .lista-servicios {
+  .servicios-footer .lista-servicios {
     width: 30%;
     margin: auto;
     display: flex;
@@ -143,7 +144,7 @@ footer {
   height: 240px;
   background: #fff;
 }
-.servicios::before {
+.servicios-footer::before {
   content: " ";
   position: absolute;
   width: 1px;
@@ -154,7 +155,7 @@ footer {
   .mapa-sitio::before {
     display: none;
   }
-  .servicios::before {
+  .servicios-footer::before {
     display: none;
   }
 }
