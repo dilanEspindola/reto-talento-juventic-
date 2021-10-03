@@ -40,7 +40,7 @@ function añadirReserva(e) {
     document.querySelector('#form').reset()
 
         
-    e.preventDefault();
+    //e.preventDefault();
 }
 
 function mostrarReserva() {
@@ -51,7 +51,7 @@ function mostrarReserva() {
     //crear elemento html
     let titulo = document.createElement('H2');
     titulo.classList.add('titulo-reservas');
-    titulo.textContent = 'reservas realizadas';
+    titulo.textContent = 'reservas enviadas';
     mostrarReserva.appendChild(titulo);
 
     for(let i = 0; i < datosGuardados.length; i++) {
@@ -93,10 +93,6 @@ function mostrarReserva() {
                 <p>Fecha: <span>${fecha}</span></p>
                 <p>Hora: <span>${hora}</span></p>
                 <p>Indicaciones especiales: <span>${indicaciones}</span></p>
-                <div class="btn-reserva">
-                <button class="btn-eliminar" onclick="eliminarReserva('${email}')">Eliminar Reserva</button>
-                <button class="btn-enviar" onclick="">Enviar Reserva</button>
-                </div>
             </div>
         `;
         }
@@ -105,7 +101,7 @@ function mostrarReserva() {
 }
 mostrarReserva();
 
-function eliminarReserva(email) {
+/*function eliminarReserva() {
     let datosGuardados = JSON.parse(localStorage.getItem('datosFormulario')); 
     for(let i = 0; i < datosGuardados.length; i++) {
         if(datosGuardados[i].email == email) {
@@ -116,3 +112,4 @@ function eliminarReserva(email) {
     localStorage.setItem('datosFormulario', JSON.stringify(datosGuardados));
     mostrarReserva();
 }
+*/

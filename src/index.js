@@ -8,6 +8,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
+app.use(express.urlencoded({extended : false}));
+app.use(express.json());
+
 //routes
 app.use(require('./routes'));
 
