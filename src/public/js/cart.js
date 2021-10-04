@@ -4,9 +4,11 @@ function leerdatos(){
     let contenido = document.querySelector('#contenedor_productos');
     contenido.innerHTML = '';
     var total = 0;
+    var final_total = 0;
     for (let item of data) {  
         
         total = item.count * item.precio;
+        final_total += total;
         contenido.innerHTML += `
         <li class="list-group-item">
           <div class="card">
@@ -43,6 +45,11 @@ function leerdatos(){
         `
 
     }
+
+    document.getElementById("total_final").innerHTML = "Total productos: $" + final_total.toString();
+    document.getElementById("servicio").innerHTML = "Servicio: $3500"
+    let gran_total = final_total + 3600;
+    document.getElementById("gran_total").innerHTML = "Total: $" + gran_total.toString();
 }
 
 leerdatos();
