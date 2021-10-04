@@ -14,7 +14,7 @@ function cargarProductos() {
               <div class="card">
                   <div class="row g-0">
                       <div class="col-md-4">
-                          <img src= "${item.imagen}" class="img-fluid rounded mx-auto d-block"> </img>
+                          <img src= "${item.imagen}" class="img-fluid rounded mx-auto d-block" id="imagen_${item.modal}"> </img>
                       </div>
                       <div class="col-md-8">
                           <div class="info_producto card-body">
