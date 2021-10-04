@@ -1,6 +1,5 @@
 function leerdatos(){
-    let data = JSON.parse(localStorage.getItem('productos'));
-    console.log(data);
+    let data = JSON.parse(localStorage.getItem('productos'));    
     let contenido = document.querySelector('#contenedor_productos');
     contenido.innerHTML = '';
     var total = 0;

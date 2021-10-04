@@ -16,6 +16,14 @@ function masProducto(num){
     document.getElementById("servicio").innerHTML = "Servicio: $3500";
     let gran_total = final_total + 3600;
     document.getElementById("gran_total").innerHTML = "Total: $" + gran_total.toString();
+
+    let data = JSON.parse(localStorage.getItem('productos'));  
+    for(let i = 0; i < data.length; i++) {
+        if(data[i].ID == valuebtn) {
+            data[i].count = count;            
+        }
+    }
+    localStorage.setItem('productos', JSON.stringify(data));
     
 }
 
@@ -42,7 +50,13 @@ function menosProducto(num){
     }
     document.getElementById("numero_productos_" + valuebtn ).innerHTML = count.toString();
 
-    
+    let data = JSON.parse(localStorage.getItem('productos'));  
+    for(let i = 0; i < data.length; i++) {
+        if(data[i].ID == valuebtn) {
+            data[i].count = count;            
+        }
+    }
+    localStorage.setItem('productos', JSON.stringify(data));
 }
 
 function deleteCarrito(num){
