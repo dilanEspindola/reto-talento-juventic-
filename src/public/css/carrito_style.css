@@ -24,6 +24,12 @@ body{
     height: auto;
 }
 
+.contenedor_productos img{	
+	box-shadow: 0 0 15px rgba(0,0,0,0.8);	
+    margin-top: 20px;
+	margin-bottom: 20px;    
+}
+
 .botones{    
     width: 200px;
     display: grid;    

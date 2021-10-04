@@ -27,7 +27,8 @@
     <!-- Title-->
     <title>Cartoon Pizza & Frutas - Carrito de Compras</title>
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>  
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+    <script src="https://smtpjs.com/v3/smtp.js"></script> 
     <script src="js/buttons_op_cart.js" type="text/javascript"></script>
     
 </head>
@@ -90,19 +91,20 @@
                     <form>
                         <div>
                             <label class="form-label"> Nombre Completo* </label>
-                            <input type="text" class="form-control" required>
+                            <input type="text" id="nombre_cliente" class="form-control" required>
                         </div>
                         <div class="mt-2">
                             <label class="form-label"> Correo Electronico* </label>
-                            <input type="email" class="form-control" required>
+                            <input type="email" id="email_cliente" class="form-control" required>
                         </div>
                         <div class="mt-2">
                             <label class="form-label"> Observaciones </label>
-                            <textarea class="form-control"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-outline-dark mt-3">Confirmar</button>
-                    </form>
-
+                            <textarea id="observaciones" class="form-control"></textarea>
+                        </div>                        
+                    </form>  
+                </div>
+                <div class="modal-footer" id="cierre">
+                    <button type="submit" onclick="validardatos()" class="btn btn-outline-dark mt-3">Confirmar</button>
                 </div>
             </div>
         </div>

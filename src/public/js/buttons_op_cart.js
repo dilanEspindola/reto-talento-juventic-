@@ -63,8 +63,7 @@ function deleteCarrito(num){
     let datos = JSON.parse(localStorage.getItem('productos'));
     for(let i = 0; i < datos.length; i++) {
         if(datos[i].ID == num) {
-            datos.splice(i, 1);
-            console.log('Producto Eliminado');
+            datos.splice(i, 1);            
         }
     }
     localStorage.setItem('productos', JSON.stringify(datos));
@@ -74,4 +73,58 @@ function deleteCarrito(num){
     swal("Completado", "El producto seleccionado se ha eliminado del carrito de compras", "success");
     cargarNumProducts();
     leerdatos();
+}
+
+function validardatos(){
+    let nombre_cliente = document.getElementById("nombre_cliente").value;
+    let email_cliente = document.getElementById("email_cliente").value;
+    let observaciones = document.getElementById("observaciones").value;
+
+    let datos = JSON.parse(localStorage.getItem('productos'));    
+    var total = 0;    
+    var final_total = 0;
+    var contentHtml = `
+    <h1>Confirmación del pedido</h1>
+    <p>Señor/a ${nombre_cliente}, sus productos han sido reservados correctamente, estos fueron:</p>  
+    <ul>    
+    `;
+
+    for(let item of datos){
+        total = item.count * item.precio;
+        final_total += total;
+        console.log(item.producto);
+        contentHtml += ` <li> ${item.producto}, cantidad: ${item.count}, precio unitario: $${item.precio}, subtotal: ${total} </li>
+        `;
+    }
+    final_total += 3500;
+    contentHtml += `</ul>
+    <p> Total a cancelar: $${final_total} </p> 
+    <p> Observaciones: ${observaciones} </p>
+    <h2> Gracias por contar con Cartoon Pizza y Frutas, ¡Te esperamos! </h2>
+    `;
+
+    if(nombre_cliente == null || nombre_cliente == "" || email_cliente == null || email_cliente == "" )
+    {
+        swal("No llenaste los datos", "Error", "error");
+    }
+    else
+    {        
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "cartoonpyf@gmail.com",
+            Password : "cartoonpizza",        
+            From : "cartoonpyf@gmail.com",
+            To : [email_cliente],
+            Subject : "Confirmación de los productos reservados",
+            Body : contentHtml  
+        }).then(
+            swal("Completado", "Los productos se han reservado correctamente. Una copia de tu reserva llegara a tu correo en unos instantes", "success")                    
+        );     
+        localStorage.clear();
+        leerdatos();
+        cargarNumProducts();
+        
+    }
+      
+
 }
