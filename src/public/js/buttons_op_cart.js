@@ -14,7 +14,7 @@ function masProducto(num){
     var final_total = parseInt(total_text.substr(18,38)) + precio_u;
     document.getElementById("total_final").innerHTML = "Total productos: $" + final_total.toString();
     document.getElementById("servicio").innerHTML = "Servicio: $3500";
-    let gran_total = final_total + 3600;
+    let gran_total = final_total + 3500;
     document.getElementById("gran_total").innerHTML = "Total: $" + gran_total.toString();
 
     let data = JSON.parse(localStorage.getItem('productos'));  
@@ -45,7 +45,7 @@ function menosProducto(num){
         var final_total = parseInt(total_text.substr(18,38)) - precio_u;
         document.getElementById("total_final").innerHTML = "Total productos: $" + final_total.toString();
         document.getElementById("servicio").innerHTML = "Servicio: $3500";
-        let gran_total = final_total + 3600;
+        let gran_total = final_total + 3500;
         document.getElementById("gran_total").innerHTML = "Total: $" + gran_total.toString();
     }
     document.getElementById("numero_productos_" + valuebtn ).innerHTML = count.toString();

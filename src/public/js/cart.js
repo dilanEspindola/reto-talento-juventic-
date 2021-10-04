@@ -1,5 +1,5 @@
 function leerdatos(){
-    let data = JSON.parse(localStorage.getItem('productos'));    
+    let data = JSON.parse(localStorage.getItem('productos'));       
     let contenido = document.querySelector('#contenedor_productos');
     contenido.innerHTML = '';
     var total = 0;
@@ -45,10 +45,19 @@ function leerdatos(){
 
     }
 
-    document.getElementById("total_final").innerHTML = "Total productos: $" + final_total.toString();
-    document.getElementById("servicio").innerHTML = "Servicio: $3500"
-    let gran_total = final_total + 3600;
-    document.getElementById("gran_total").innerHTML = "Total: $" + gran_total.toString();
+    if(final_total == 0 || final_total == null) 
+    {
+        document.getElementById("total_final").innerHTML = "Total productos:" 
+        document.getElementById("servicio").innerHTML = "Servicio:"        
+        document.getElementById("gran_total").innerHTML = "Total:"
+    }
+    else{
+        document.getElementById("total_final").innerHTML = "Total productos: $" + final_total.toString();
+        document.getElementById("servicio").innerHTML = "Servicio: $3500"
+        let gran_total = final_total + 3500;
+        document.getElementById("gran_total").innerHTML = "Total: $" + gran_total.toString();
+    }
+    
 }
 
 leerdatos();
