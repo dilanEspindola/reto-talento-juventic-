@@ -1,6 +1,7 @@
 //limpiar contenido del formulario
 document.querySelector('#limpiar').addEventListener('click', () => {
     document.querySelector('#form').reset();
+    document.querySelector('#name').focus();
 })
 
 

@@ -178,20 +178,64 @@ select.servicios:focus {
   transform: scale(0.97);
 }
 
+.btn-mostrar-reserva {
+  display: inline-block;
+  width: 20%;
+  margin-left: 40%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #c9d6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e2e2e2,
+    #c9d6ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e2e2e2,
+    #c9d6ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #000;
+}
+.btn-mostrar-reserva:hover {
+  background: #c1c1c2;
+  color: #000;
+}
+.btn-mostrar-reserva:active {
+  transform: scale(0.97);
+}
+
 /* MEDIA QUERIES*/
 @media (max-width: 965px) {
   .contenedor-form {
     width: 70%;
+  }
+  .btn-mostrar-reserva {
+    width: 50%;
+    margin-left: 25%;
   }
 }
 @media (max-width: 680px) {
   .contenedor-form {
     width: 80%;
   }
+  .btn-mostrar-reserva {
+    width: 50%;
+    margin-left: 25%;
+  }
 }
 @media (max-width: 580px) {
   .contenedor-form {
     width: 90%;
+  }
+  .btn-mostrar-reserva {
+    width: 50%;
+    margin-left: 25%;
   }
   .fecha-hora {
     flex-direction: column;

@@ -106,6 +106,10 @@ router.post('/envio-reserva', (req, res) => {
     console.log(req.body);
 });
 
+router.get('/mostrar-reservas', (req, res) => {
+    res.render('mostrarreserva.html');
+});
+
 router.get('/contactenos', (req, res) => {
     res.render('contactenos.html');
 });

@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.contenedor-reservas {
+  max-width: 1800px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.info-reserva {
+  border: 1px solid;
+  width: 90%;
+  margin: 30px 20px;
+  padding: 20px;
+  background-color: rgb(22, 22, 22);
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 1168px) {
+  .contenedor-reservas {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 850px) {
+  .contenedor-reservas {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-reserva h2 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.datos-reserva {
+  border-radius: 2px;
+}
+.datos-reserva p {
+  color: #fff;
+}
