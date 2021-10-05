@@ -1,4 +1,7 @@
-document.querySelector('#form').addEventListener('submit', añadirReserva);
+
+
+
+/*document.querySelector('#form').addEventListener('submit', añadirReserva);
 
 function añadirReserva(e) {    
     

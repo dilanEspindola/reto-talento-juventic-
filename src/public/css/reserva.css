@@ -209,7 +209,7 @@ select.servicios:focus {
 }
 
 /* mostrar reservas*/
-.mostrarReserva {
+/*.mostrarReserva {
   width: 70%;
   margin: 0 auto;
   margin-bottom: 40px;
@@ -246,10 +246,10 @@ select.servicios:focus {
   color: #fff;
   text-transform: initial;
   font-size: 21px;
-}
+}*/
 
 /* Enviar y Eliminar reserva */
-.btn-reserva {
+/*.btn-reserva {
   display: flex;
   justify-content: space-between;
 }
@@ -268,7 +268,7 @@ select.servicios:focus {
 .btn-enviar:hover {
   background: #dbdada;
   color: #000;
-}
+}*/
 
 /* FOOTER */
 footer {
