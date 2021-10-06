@@ -77,7 +77,7 @@ router.post('/envio-reserva', (req, res) => {
             let destinatarios = [email, 'cartooncliente@gmail.com'];
 
             const mailOptions = {
-                    from: "Informacion de la reserva <cartooncliente@gmail.com",
+                    from: "cartoonCliente <cartooncliente@gmail.com",
                     to: destinatarios,
                     subject : "Informacion de la reserva",
                     html : contentHTML
